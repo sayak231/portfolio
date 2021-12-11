@@ -1,0 +1,35 @@
+@import "./global-css-variables.scss";
+
+.hamburger {
+  width: 32px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+
+  span {
+    width: 97.5%;
+    height: 3px;
+    background-color: $base-color;
+    transform-origin: left;
+    transition: all 1s ease;
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        background-color: white;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        background-color: white;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

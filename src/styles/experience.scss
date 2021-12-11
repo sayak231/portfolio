@@ -1,0 +1,71 @@
+@import "./global-css-variables.scss";
+
+#experience {
+  height: fit-content;
+  background-color: white;
+  padding: 2rem;
+  scroll-margin: 70px;
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 15px;
+
+    @include mobile {
+      font-size: 22px;
+      letter-spacing: 7.5px;
+    }
+  }
+
+  h2 {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 0;
+
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+
+  h3 {
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+
+  h4 {
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+
+  p {
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+
+  .vertical-timeline-element-date {
+    color: #000000;
+    font-size: 22px !important;
+    font-weight: bolder !important;
+    @include mobile {
+      color: #ffffff;
+      font-size: 12px !important;
+    }
+  }
+
+  .vertical-timeline-element-content {
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

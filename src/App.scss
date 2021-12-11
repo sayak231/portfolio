@@ -1,0 +1,44 @@
+@import "./styles/about.scss";
+@import "./styles/backdrop.scss";
+@import "./styles/contact.scss";
+@import "./styles/drawer.scss";
+@import "./styles/education.scss";
+@import "./styles/experience.scss";
+@import "./styles/footer.scss";
+@import "./styles/global-css-variables.scss";
+@import "./styles/hamburger.scss";
+@import "./styles/homepage.scss";
+@import "./styles/navbar.scss";
+@import "./styles/projects.scss";
+@import "./styles/skills.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.app {
+  height: 100vh;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .page-sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    // height: fit-content;
+    position: relative;
+    top: 70px;
+    scroll-snap-type: y mandatory;
+    // scrollbar-width: none;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+
+    > * {
+      width: 100vw;
+      // height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "ES 100" sans-serif;
+  font-weight: 100;
+  src: url("./fonts/ElasticStretch.ttf") format("ttf"),
+    url("fonts/ElasticStretch.otf") format("otf");
+}
+
+@font-face {
+  font-family: "ES 500" sans-serif;
+  font-weight: 500;
+  src: url("./fonts/ElasticStretch.ttf") format("ttf"),
+    url("fonts/ElasticStretch.otf") format("otf");
+}
+
+@font-face {
+  font-family: "ES 700" sans-serif;
+  font-weight: 700;
+  src: url("./fonts/ElasticStretch.ttf") format("ttf"),
+    url("fonts/ElasticStretch.otf") format("otf");
+}
+
+$base-color: #171717;
+$border-dark: rgba($base-color, 0.88);
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: $width) {
+    @content;
+  }
+}
