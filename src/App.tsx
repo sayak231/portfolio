@@ -19,17 +19,24 @@ const App: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
 
-  const executeScroll = (ref: React.RefObject<HTMLDivElement>) => {
+  const executeScroll = (
+    e: React.SyntheticEvent,
+    ref: React.RefObject<HTMLDivElement>,
+  ) => {
+    e.preventDefault();
     ref.current!.scrollIntoView({ block: "start", behavior: "smooth" });
   };
 
-  const executeScrollSkill = () => executeScroll(skillRef);
-  const executeScrollExperience = () => executeScroll(experienceRef);
-  const executeScrollEducation = () => executeScroll(educationRef);
-  const executeScrollProjects = () => executeScroll(projectsRef);
-  const executeScrollContact = () => executeScroll(contactRef);
-  const executeScrollAbout = () => executeScroll(aboutRef);
-  const executeScrollHome = () => executeScroll(homeRef);
+  const executeScrollSkill = (e: React.SyntheticEvent) => executeScroll(e, skillRef);
+  const executeScrollExperience = (e: React.SyntheticEvent) =>
+    executeScroll(e, experienceRef);
+  const executeScrollEducation = (e: React.SyntheticEvent) =>
+    executeScroll(e, educationRef);
+  const executeScrollProjects = (e: React.SyntheticEvent) =>
+    executeScroll(e, projectsRef);
+  const executeScrollContact = (e: React.SyntheticEvent) => executeScroll(e, contactRef);
+  const executeScrollAbout = (e: React.SyntheticEvent) => executeScroll(e, aboutRef);
+  const executeScrollHome = (e: React.SyntheticEvent) => executeScroll(e, homeRef);
 
   return (
     <div className="app">

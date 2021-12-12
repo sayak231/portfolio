@@ -3,13 +3,13 @@ import { headers } from "./../constants/headers";
 interface DrawerProps {
   active: string;
   handleClose: React.MouseEventHandler<HTMLUListElement>;
-  executeScrollSkill: () => void;
-  executeScrollExperience: () => void;
-  executeScrollContact: () => void;
-  executeScrollHome: () => void;
-  executeScrollAbout: () => void;
-  executeScrollEducation: () => void;
-  executeScrollProjects: () => void;
+  executeScrollSkill: (e: React.SyntheticEvent) => void;
+  executeScrollExperience: (e: React.SyntheticEvent) => void;
+  executeScrollContact: (e: React.SyntheticEvent) => void;
+  executeScrollHome: (e: React.SyntheticEvent) => void;
+  executeScrollAbout: (e: React.SyntheticEvent) => void;
+  executeScrollEducation: (e: React.SyntheticEvent) => void;
+  executeScrollProjects: (e: React.SyntheticEvent) => void;
 }
 
 const Drawer: React.FC<DrawerProps> = ({

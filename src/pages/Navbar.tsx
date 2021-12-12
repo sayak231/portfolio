@@ -8,13 +8,13 @@ type Active = "active" | "";
 type FillColor = "white" | "#171717";
 
 interface NavbarProps {
-  executeScrollSkill: () => void;
-  executeScrollExperience: () => void;
-  executeScrollContact: () => void;
-  executeScrollHome: () => void;
-  executeScrollAbout: () => void;
-  executeScrollEducation: () => void;
-  executeScrollProjects: () => void;
+  executeScrollSkill: (e: React.SyntheticEvent) => void;
+  executeScrollExperience: (e: React.SyntheticEvent) => void;
+  executeScrollContact: (e: React.SyntheticEvent) => void;
+  executeScrollHome: (e: React.SyntheticEvent) => void;
+  executeScrollAbout: (e: React.SyntheticEvent) => void;
+  executeScrollEducation: (e: React.SyntheticEvent) => void;
+  executeScrollProjects: (e: React.SyntheticEvent) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
