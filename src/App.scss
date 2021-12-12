@@ -18,27 +18,28 @@
 }
 .app {
   height: 100vh;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  // overflow-x: hidden;
+  // scrollbar-width: none;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
   .page-sections {
+    overflow-x: hidden;
     width: 100%;
     height: calc(100vh - 70px);
     // height: fit-content;
     position: relative;
     top: 70px;
-    scroll-snap-type: y mandatory;
-    // scrollbar-width: none;
-    // &::-webkit-scrollbar {
-    //   display: none;
-    // }
+    // scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     > * {
       width: 100vw;
       // height: calc(100vh - 70px);
-      scroll-snap-align: start;
+      // scroll-snap-align: start;
     }
   }
 }
