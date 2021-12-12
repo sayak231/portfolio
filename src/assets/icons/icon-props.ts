@@ -3,5 +3,5 @@ export default interface Props {
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   height?: string;
   width?: string;
-  fillColor: string;
+  fillColor?: string;
 }
