@@ -24,7 +24,7 @@
     display: none;
   }
   .page-sections {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     width: 100%;
     height: calc(100vh - 70px);
     // height: fit-content;
@@ -37,7 +37,7 @@
     }
 
     > * {
-      width: 100vw;
+      width: 100%;
       // height: calc(100vh - 70px);
       // scroll-snap-align: start;
     }
