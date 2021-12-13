@@ -3,6 +3,7 @@
 #contact {
   background-color: white;
   height: calc(100vh - 170px);
+  min-height: 700px;
   scroll-margin: 70px;
   display: flex;
 
@@ -36,8 +37,8 @@
       }
 
       @include laptop {
-        height: 60%;
-        width: 60%;
+        height: 400px;
+        width: 400px;
       }
     }
   }

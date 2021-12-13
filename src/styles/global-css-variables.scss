@@ -22,11 +22,18 @@
 $base-color: #171717;
 $border-dark: rgba($base-color, 0.88);
 
-$mobile-width: 768px;
+$mobile-width: 868px;
 $laptop-width: 1400px;
+$mobile-height: 420px;
 
 @mixin mobile {
   @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin rotated-mobile {
+  @media (max-height: $mobile-height) {
     @content;
   }
 }

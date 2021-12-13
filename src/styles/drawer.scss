@@ -32,15 +32,27 @@
     font-size: 30px;
     color: white;
 
+    @include rotated-mobile {
+      margin-top: 70px;
+    }
+
     li {
       margin-bottom: 35px;
       font-size: inherit;
       color: inherit;
       text-decoration: none;
       cursor: pointer;
+
       @include mobile {
         font-size: 20px;
       }
+
+      @include rotated-mobile {
+        height: 12.5px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
       &:hover {
         color: yellowgreen;
         font-weight: 600;
