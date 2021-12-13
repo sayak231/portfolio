@@ -15,6 +15,10 @@
 
 * {
   box-sizing: border-box;
+  scrollbar-width: 0;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .app {
   font-family: "Roboto", sans-serif;
