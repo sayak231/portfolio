@@ -2,7 +2,7 @@
 
 #contact {
   background-color: white;
-  height: 800px;
+  height: 650px;
   scroll-margin: 70px;
   display: flex;
 
@@ -25,14 +25,18 @@
     }
 
     .shake {
-      margin-top: 100px;
-      height: 800px;
-      width: 800px;
+      height: 70%;
+      width: 70%;
 
       @include mobile {
         margin-top: 75px;
         height: 200px;
         width: 200px;
+      }
+
+      @include laptop {
+        height: 40%;
+        width: 40%;
       }
     }
   }
@@ -57,8 +61,8 @@
     }
 
     form {
-      width: 70%;
-      height: 50%;
+      width: 80%;
+      height: 60%;
       margin-top: 50px;
       display: flex;
       flex-direction: column;
@@ -89,7 +93,7 @@
 
       button {
         width: 150px;
-        height: 50px;
+        height: 60px;
         font-size: 14px;
         color: $base-color;
         background-color: greenyellow;

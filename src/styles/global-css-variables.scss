@@ -22,10 +22,17 @@
 $base-color: #171717;
 $border-dark: rgba($base-color, 0.88);
 
-$width: 768px;
+$mobile-width: 768px;
+$laptop-width: 1400px;
 
 @mixin mobile {
-  @media (max-width: $width) {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $mobile-width) and (max-width: $laptop-width) {
     @content;
   }
 }
