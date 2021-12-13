@@ -1,6 +1,12 @@
+@import "./global-css-variables.scss";
+
 #footer {
   height: 100px;
   background-color: black;
+
+  @include mobile {
+    height: 300px;
+  }
 
   .social-icons {
     display: flex;
