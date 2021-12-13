@@ -11,12 +11,13 @@
 @import "./styles/navbar.scss";
 @import "./styles/projects.scss";
 @import "./styles/skills.scss";
+@import "./styles/wave-loader.scss";
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 .app {
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   overflow-x: hidden;
   scrollbar-width: none;
