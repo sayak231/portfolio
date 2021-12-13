@@ -11,16 +11,17 @@
 @import "./styles/navbar.scss";
 @import "./styles/projects.scss";
 @import "./styles/skills.scss";
+@import "./styles/wave-loader.scss";
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   scrollbar-width: 0;
   &::-webkit-scrollbar {
     width: 0;
   }
 }
 .app {
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   .page-sections {
     width: 100%;

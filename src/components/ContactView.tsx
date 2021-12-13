@@ -2,8 +2,9 @@ import { useState } from "react";
 import { send } from "emailjs-com";
 import Shake from "../assets/icons/Shake";
 import { emailJSIds } from "../constants/emailjs-constants";
+import WaveLoader from "./WaveLoader";
 
-const ContactView = () => {
+const ContactView: React.FC = () => {
   const { SERVICE_ID, TEMPLATE_ID, USER_ID } = emailJSIds;
   const [toSend, setToSend] = useState({
     user_name: "",
@@ -12,24 +13,40 @@ const ContactView = () => {
     message: "",
   });
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [isFormFilled, setIsFormFilled] = useState(false);
 
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
+    const newSendObject = { ...toSend, [e.target.name]: e.target.value };
+    const flag = Object.values(newSendObject).every((value) => value !== "");
+    if (flag) {
+      setIsFormFilled(true);
+    } else {
+      setIsFormFilled(false);
+    }
+    setToSend(newSendObject);
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID)
       .then(() => {
-        setMessage("Message sent successfully!");
+        setMessage("Thank you for the message 😄");
         setTimeout(() => {
           setMessage("");
-        }, 2000);
+        }, 5000);
+        setLoading(false);
+        setIsFormFilled(false);
       })
       .catch(() => {
-        setMessage("Message failed to send!");
+        setMessage("Message failed to send 😔");
         setTimeout(() => {
           setMessage("");
-        }, 2000);
+        }, 5000);
+        setLoading(false);
+        setIsFormFilled(false);
       });
     setToSend({
       user_name: "",
@@ -68,13 +85,23 @@ const ContactView = () => {
             onChange={handleChange}
           />
           <textarea
-            rows={5}
+            rows={3}
             placeholder="Message"
             name="message"
             value={toSend.message}
             onChange={handleChange}
           />
-          <button type="submit">Send</button>
+          <button
+            className={isFormFilled ? "" : "disabled"}
+            disabled={!isFormFilled}
+            type="submit"
+          >
+            {loading ? (
+              <WaveLoader height="45px" width="45px" />
+            ) : (
+              <span className="send-caption">Send</span>
+            )}
+          </button>
           <span>{message}</span>
         </form>
       </div>
