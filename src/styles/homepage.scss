@@ -128,7 +128,7 @@
     }
   }
 
-  .custom-shape-divider-bottom-1639549807 {
+  .custom-shape-divider-bottom-1639593132 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -138,22 +138,14 @@
     transform: rotate(180deg);
   }
 
-  .custom-shape-divider-bottom-1639549807 svg {
+  .custom-shape-divider-bottom-1639593132 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 183px;
-
-    @include mobile {
-      height: 103px;
-    }
-
-    @include laptop {
-      height: 143px;
-    }
+    height: 209px;
   }
 
-  .custom-shape-divider-bottom-1639549807 .shape-fill {
+  .custom-shape-divider-bottom-1639593132 .shape-fill {
     fill: #38ef7d57;
   }
 }
