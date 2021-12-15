@@ -12,6 +12,14 @@ const canvasStyles: React.CSSProperties = {
   left: 0,
 };
 
+function getAnimationSettings(particleRatio, opts) {
+  return {
+    ...opts,
+    origin: { y: 0.7 },
+    particleCount: Math.floor(200 * particleRatio),
+  };
+}
+
 const Realistic: React.FC = () => {
   const saveFile = () => {
     saveAs(
@@ -25,12 +33,9 @@ const Realistic: React.FC = () => {
   }, []);
 
   const makeShot = useCallback((particleRatio, opts) => {
-    refAnimationInstance.current &&
-      refAnimationInstance.current({
-        ...opts,
-        origin: { y: 0.7 },
-        particleCount: Math.floor(200 * particleRatio),
-      });
+    refAnimationInstance.current! &&
+      // @ts-ignore
+      refAnimationInstance.current(getAnimationSettings(particleRatio, opts));
   }, []);
 
   const fire = useCallback(() => {
