@@ -2,7 +2,6 @@
 @import "./styles/backdrop.scss";
 @import "./styles/contact.scss";
 @import "./styles/drawer.scss";
-@import "./styles/education.scss";
 @import "./styles/experience.scss";
 @import "./styles/footer.scss";
 @import "./styles/global-css-variables.scss";
@@ -23,6 +22,7 @@
 .app {
   font-family: "Roboto", sans-serif;
   height: 100vh;
+
   .page-sections {
     width: 100%;
     height: calc(100vh - 70px);

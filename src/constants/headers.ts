@@ -3,7 +3,6 @@ export const headers = Object.freeze({
   ABOUT: "About me",
   EXPERIENCE: "Experiences",
   SKILLS: "Skills",
-  EDUCATION: "Education",
   PROJECTS: "Projects",
   CONTACT: "Contact me",
 });

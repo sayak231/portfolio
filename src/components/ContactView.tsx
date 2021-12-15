@@ -33,7 +33,7 @@ const ContactView: React.FC = () => {
     setLoading(true);
     send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID)
       .then(() => {
-        setMessage("Thank you for the message 😄");
+        setMessage("✔ Thank you for the message 😄");
         setTimeout(() => {
           setMessage("");
         }, 5000);
@@ -41,7 +41,7 @@ const ContactView: React.FC = () => {
         setIsFormFilled(false);
       })
       .catch(() => {
-        setMessage("Message failed to send 😔");
+        setMessage("❗ Message failed to send 😔");
         setTimeout(() => {
           setMessage("");
         }, 5000);

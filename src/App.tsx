@@ -1,6 +1,5 @@
 import "./App.scss";
 import About from "./pages/About";
-import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Homepage from "./pages/Homepage";
 import Navbar from "./pages/Navbar";
@@ -13,7 +12,6 @@ import { useRef } from "react";
 const App: React.FC = () => {
   const skillRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
-  const educationRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -30,8 +28,6 @@ const App: React.FC = () => {
   const executeScrollSkill = (e: React.SyntheticEvent) => executeScroll(e, skillRef);
   const executeScrollExperience = (e: React.SyntheticEvent) =>
     executeScroll(e, experienceRef);
-  const executeScrollEducation = (e: React.SyntheticEvent) =>
-    executeScroll(e, educationRef);
   const executeScrollProjects = (e: React.SyntheticEvent) =>
     executeScroll(e, projectsRef);
   const executeScrollContact = (e: React.SyntheticEvent) => executeScroll(e, contactRef);
@@ -43,7 +39,6 @@ const App: React.FC = () => {
       <Navbar
         executeScrollSkill={executeScrollSkill}
         executeScrollExperience={executeScrollExperience}
-        executeScrollEducation={executeScrollEducation}
         executeScrollProjects={executeScrollProjects}
         executeScrollContact={executeScrollContact}
         executeScrollAbout={executeScrollAbout}
@@ -54,7 +49,6 @@ const App: React.FC = () => {
         <About ref={aboutRef} />
         <Experience ref={experienceRef} />
         <Skills ref={skillRef} />
-        <Education ref={educationRef} />
         <Projects ref={projectsRef} />
         <Contact ref={contactRef} />
         <Footer />
