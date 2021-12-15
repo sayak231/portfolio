@@ -1,5 +1,236 @@
+@import "./global-css-variables.scss";
+
 #about {
-  background-color: indigo;
-  height: 500px;
+  background-color: transparent;
+  height: calc(100vh - 35px);
   scroll-margin: 70px;
+
+  @include mobile {
+    height: 55rem;
+  }
+
+  .custom-shape-divider-top-1639551048 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1639551048 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 209px;
+  }
+
+  .custom-shape-divider-top-1639551048 .shape-fill {
+    fill: #38ef7d57;
+  }
+
+  .a {
+    height: calc(100vh - 279px);
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      height: 90%;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .a-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+
+    @include mobile {
+      width: 100%;
+      height: 150px;
+      flex-direction: column;
+    }
+  }
+
+  .a-right {
+    width: 45%;
+
+    @include mobile {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  .a-card.bg {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: #56ab2f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #a8e063,
+      #56ab2f
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffd000,
+      #beb200
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .a-card.bg1 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: rgb(201, 171, 0);
+
+    @include mobile {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    @include rotated-mobile {
+      width: fit-content;
+    }
+  }
+
+  .a-card {
+    width: 60%;
+    height: 70%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+
+    @include mobile {
+      height: 30%;
+    }
+  }
+
+  .a-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .a-award-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+  }
+
+  .a-title {
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 15px;
+  }
+
+  .a-sub {
+    margin: 20px 0px;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .a-desc {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  .a-award {
+    margin-top: 125px;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+
+  .a-award-texts {
+    width: 70%;
+  }
+
+  .a-award-title {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .resume-button {
+    position: absolute;
+    top: -4000px;
+    left: -4000px;
+  }
+
+  #gooey-button {
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    color: $second;
+    filter: url("#gooey");
+    position: relative;
+    background-color: $prime;
+    cursor: pointer;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+
+    @include laptop {
+      font-size: 1.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .bubbles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      .bubble {
+        background-color: $prime;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: -1;
+
+        @for $bubble from 1 through 10 {
+          &:nth-child(#{$bubble}) {
+            $size: 25px;
+            left: (random(90) + 10) + px;
+            width: $size;
+            height: $size;
+            animation: move-#{$bubble} #{3 + $bubble * 0.02}s infinite;
+            animation-delay: #{$bubble * 0.2}s;
+          }
+        }
+      }
+    }
+  }
+  @for $bubble from 1 through 10 {
+    @keyframes move-#{$bubble} {
+      0% {
+        transform: translate(0, 0);
+      }
+      99% {
+        transform: translate(0, -(random(80) + 50) + px);
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+    }
+  }
 }

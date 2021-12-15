@@ -13,7 +13,6 @@ interface NavbarProps {
   executeScrollContact: (e: React.SyntheticEvent) => void;
   executeScrollHome: (e: React.SyntheticEvent) => void;
   executeScrollAbout: (e: React.SyntheticEvent) => void;
-  executeScrollEducation: (e: React.SyntheticEvent) => void;
   executeScrollProjects: (e: React.SyntheticEvent) => void;
 }
 
@@ -23,7 +22,6 @@ const Navbar: React.FC<NavbarProps> = ({
   executeScrollContact,
   executeScrollHome,
   executeScrollAbout,
-  executeScrollEducation,
   executeScrollProjects,
 }) => {
   const [active, setActive] = useState<Active>("");
@@ -59,7 +57,6 @@ const Navbar: React.FC<NavbarProps> = ({
         executeScrollContact={executeScrollContact}
         executeScrollHome={executeScrollHome}
         executeScrollAbout={executeScrollAbout}
-        executeScrollEducation={executeScrollEducation}
         executeScrollProjects={executeScrollProjects}
         active={active}
         handleClose={handleClose}

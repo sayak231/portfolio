@@ -25,6 +25,8 @@ $border-dark: rgba($base-color, 0.88);
 $mobile-width: 868px;
 $laptop-width: 1400px;
 $mobile-height: 420px;
+$prime: #00ff80;
+$second: #0c1016;
 
 @mixin mobile {
   @media (max-width: $mobile-width) {
