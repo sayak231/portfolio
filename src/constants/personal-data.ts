@@ -11,8 +11,8 @@ export const personalData = {
   },
   about: {
     title: "ABOUT ME",
-    sub: "It is a long established fact that a reader will be distracted by the readable content.",
-    main: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehende.",
+    sub: "Highly motivated hard-working smart-worker.",
+    main: "Seasoned, forward-looking Software Engineer with 1+ years background in developing innovative and efficient Front-end progressive web applications. Experience includes coding, troubleshooting, and testing of WMS software products. Relevant skills include JavaScript, React, Node js and Debugging.",
   },
   experience: {
     title: "EXPERIENCE AND EDUCATION",
@@ -49,7 +49,8 @@ export const personalData = {
         designation: "Bachelor in Technology",
         company: "Information Technology",
         location: "SRM Institute of Science and Technology",
-        description: "",
+        description:
+          "Graduated in Information Technology with a CGPA of 75.46%. Major subjects include Data Structures and Algorithms, Computer Networks, Operating Systems, etc. Submitted the final year project in the subject of Machine Learning, Fetal Brain Abnormalities Detection.",
         icon: "education",
       },
       {
@@ -57,7 +58,8 @@ export const personalData = {
         designation: "ISC",
         company: "Don Bosco School",
         location: "Liluah, Howrah",
-        description: "",
+        description:
+          "12th standard with a CGPA of 92.75%. Studied in the subject of Science. Major subjects include Physics, Chemistry, Mathematics, etc.",
         icon: "school",
       },
       {
@@ -65,7 +67,8 @@ export const personalData = {
         designation: "ICSE",
         company: "Don Bosco School",
         location: "Liluah, Howrah",
-        description: "",
+        description:
+          "10th standard with a CGPA of 88.20%. Elementary school with a major subjects of Physics, Chemistry, Mathematics, etc.",
         icon: "student",
       },
     ],

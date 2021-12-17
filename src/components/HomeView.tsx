@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { init } from "ityped";
-import Me from "../assets/homepageImg.png";
+import Me from "../assets/homepageImg.webp";
 import { itypedConfig } from "../constants/itypedConfig";
 import { personalData } from "../constants/personal-data";
 

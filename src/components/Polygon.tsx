@@ -7,6 +7,12 @@ const Polygon = () => {
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
       >
+        <defs>
+          <linearGradient id="MyGradient">
+            <stop offset="50%" stopColor="#38ef7d" />
+            <stop offset="95%" stopColor="#11998e" />
+          </linearGradient>
+        </defs>
         <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="shape-fill"></path>
       </svg>
     </div>

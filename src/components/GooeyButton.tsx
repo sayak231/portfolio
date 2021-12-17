@@ -21,7 +21,7 @@ const GooeyButton = ({ fire }: GooeyButtonProps) => {
       </svg>
 
       <button onClick={fire} id="gooey-button">
-        Download Resume
+        Hire Me ? CV here...
         <span className="bubbles">
           <span className="bubble"></span>
           <span className="bubble"></span>

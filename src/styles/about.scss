@@ -22,10 +22,14 @@
     display: block;
     width: calc(100% + 1.3px);
     height: 209px;
+
+    @include laptop {
+      height: 100px;
+    }
   }
 
   .custom-shape-divider-top-1639551048 .shape-fill {
-    fill: #38ef7d57;
+    fill: url(#Gradient);
   }
 
   .a {
@@ -83,6 +87,10 @@
     @include mobile {
       display: none;
     }
+
+    @include laptop {
+      top: 0;
+    }
   }
 
   .a-card.bg1 {
@@ -101,6 +109,11 @@
     @include rotated-mobile {
       width: fit-content;
     }
+
+    @include laptop {
+      top: 25px;
+      left: 75px;
+    }
   }
 
   .a-card {
@@ -112,6 +125,11 @@
 
     @include mobile {
       height: 30%;
+    }
+
+    @include laptop {
+      width: 50%;
+      height: 90%;
     }
   }
 
@@ -131,17 +149,38 @@
     font-weight: 600;
     margin-bottom: 40px;
     letter-spacing: 15px;
+
+    @include mobile {
+      font-size: 22px;
+      letter-spacing: 7.5px;
+    }
   }
 
   .a-sub {
     margin: 20px 0px;
     font-weight: 500;
     font-size: 1.3rem;
+
+    @include mobile {
+      font-size: 1.2rem;
+    }
+
+    @include laptop {
+      font-size: 1.1rem;
+    }
   }
 
   .a-desc {
     font-weight: 400;
     font-size: 1.2rem;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+
+    @include laptop {
+      font-size: 0.9rem;
+    }
   }
 
   .a-award {
@@ -149,6 +188,14 @@
 
     @include mobile {
       margin-top: 50px;
+    }
+
+    @include laptop {
+      margin-top: 50px;
+    }
+
+    @include rotated-mobile {
+      margin-top: 20px;
     }
   }
 
@@ -170,7 +217,7 @@
 
   #gooey-button {
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     color: $second;
     filter: url("#gooey");
@@ -183,11 +230,15 @@
     }
 
     @include laptop {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     &:focus {
       outline: none;
+    }
+
+    &:hover {
+      background-color: #00eb75;
     }
 
     .bubbles {
@@ -217,6 +268,10 @@
           }
         }
       }
+    }
+
+    &:hover .bubble {
+      background-color: #00eb75;
     }
   }
   @for $bubble from 1 through 10 {

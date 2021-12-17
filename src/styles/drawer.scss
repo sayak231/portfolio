@@ -6,7 +6,7 @@
   right: -300px;
   width: 300px;
   height: 100vh;
-  background-color: $base-color;
+  background-color: linear-gradient(to right, #38ef7d, #11998e);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,15 @@
   @include mobile {
     right: -200px;
     width: 200px;
+    background-color: $base-color;
+  }
+
+  @include laptop {
+    background-color: $base-color;
+  }
+
+  @include rotated-mobile {
+    background-color: $base-color;
   }
 
   &.active {

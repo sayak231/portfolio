@@ -23,7 +23,8 @@ $base-color: #171717;
 $border-dark: rgba($base-color, 0.88);
 
 $mobile-width: 868px;
-$laptop-width: 1400px;
+$laptop-width: 1350px;
+$laptop-height: 600px;
 $mobile-height: 420px;
 $prime: #00ff80;
 $second: #0c1016;
@@ -41,7 +42,7 @@ $second: #0c1016;
 }
 
 @mixin laptop {
-  @media (min-width: $mobile-width) and (max-width: $laptop-width) {
+  @media (min-width: $mobile-width) and (max-width: $laptop-width) and (max-height: $laptop-height) {
     @content;
   }
 }

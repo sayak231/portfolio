@@ -8,21 +8,21 @@ type Active = "active" | "";
 type FillColor = "white" | "#171717";
 
 interface NavbarProps {
-  executeScrollSkill: (e: React.SyntheticEvent) => void;
   executeScrollExperience: (e: React.SyntheticEvent) => void;
   executeScrollContact: (e: React.SyntheticEvent) => void;
   executeScrollHome: (e: React.SyntheticEvent) => void;
   executeScrollAbout: (e: React.SyntheticEvent) => void;
-  executeScrollProjects: (e: React.SyntheticEvent) => void;
+  // executeScrollSkill: (e: React.SyntheticEvent) => void;
+  // executeScrollProjects: (e: React.SyntheticEvent) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
-  executeScrollSkill,
   executeScrollExperience,
   executeScrollContact,
   executeScrollHome,
   executeScrollAbout,
-  executeScrollProjects,
+  // executeScrollSkill,
+  // executeScrollProjects,
 }) => {
   const [active, setActive] = useState<Active>("");
   const [fillColor, setFillColor] = useState<FillColor>("#171717");
@@ -52,12 +52,12 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
       <Drawer
-        executeScrollSkill={executeScrollSkill}
         executeScrollExperience={executeScrollExperience}
         executeScrollContact={executeScrollContact}
         executeScrollHome={executeScrollHome}
         executeScrollAbout={executeScrollAbout}
-        executeScrollProjects={executeScrollProjects}
+        // executeScrollSkill={executeScrollSkill}
+        // executeScrollProjects={executeScrollProjects}
         active={active}
         handleClose={handleClose}
       />
