@@ -156,33 +156,6 @@
     }
   }
 
-  .a-sub {
-    margin: 20px 0px;
-    font-weight: 500;
-    font-size: 1.3rem;
-
-    @include mobile {
-      font-size: 1.2rem;
-    }
-
-    @include laptop {
-      font-size: 1.1rem;
-    }
-  }
-
-  .a-desc {
-    font-weight: 400;
-    font-size: 1.2rem;
-
-    @include mobile {
-      font-size: 1rem;
-    }
-
-    @include laptop {
-      font-size: 0.9rem;
-    }
-  }
-
   .a-award {
     margin-top: 125px;
 
@@ -287,5 +260,32 @@
         opacity: 0;
       }
     }
+  }
+}
+
+.a-sub {
+  margin: 20px 0px;
+  font-weight: 500;
+  font-size: 1.3rem;
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+
+  @include laptop {
+    font-size: 1.1rem;
+  }
+}
+
+.a-desc {
+  font-weight: 400;
+  font-size: 1.2rem;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+
+  @include laptop {
+    font-size: 0.9rem;
   }
 }

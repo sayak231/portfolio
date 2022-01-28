@@ -7,7 +7,7 @@ interface DrawerProps {
   executeScrollContact: (e: React.SyntheticEvent) => void;
   executeScrollHome: (e: React.SyntheticEvent) => void;
   executeScrollAbout: (e: React.SyntheticEvent) => void;
-  // executeScrollSkill: (e: React.SyntheticEvent) => void;
+  executeScrollSkill: (e: React.SyntheticEvent) => void;
   // executeScrollProjects: (e: React.SyntheticEvent) => void;
 }
 
@@ -18,14 +18,15 @@ const Drawer: React.FC<DrawerProps> = ({
   executeScrollContact,
   executeScrollHome,
   executeScrollAbout,
-  // executeScrollSkill,
+  executeScrollSkill,
   // executeScrollProjects,
 }) => {
   const {
     HOMEPAGE,
     ABOUT,
     EXPERIENCE,
-    // SKILLS, PROJECTS,
+    SKILLS,
+    // PROJECTS,
     CONTACT,
   } = headers;
 
@@ -35,8 +36,8 @@ const Drawer: React.FC<DrawerProps> = ({
         <li onClick={executeScrollHome}>{HOMEPAGE}</li>
         <li onClick={executeScrollAbout}>{ABOUT}</li>
         <li onClick={executeScrollExperience}>{EXPERIENCE}</li>
-        {/* <li onClick={executeScrollSkill}>{SKILLS}</li>
-        <li onClick={executeScrollProjects}>{PROJECTS}</li> */}
+        <li onClick={executeScrollSkill}>{SKILLS}</li>
+        {/* <li onClick={executeScrollProjects}>{PROJECTS}</li> */}
         <li onClick={executeScrollContact}>{CONTACT}</li>
       </ul>
     </div>

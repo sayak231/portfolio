@@ -73,4 +73,10 @@ export const personalData = {
       },
     ],
   },
+  skills: {
+    mobileTitle: "SKILLSET",
+    laptopTitle: "WHAT I MOSTLY WORK ON ?",
+    sub: "My core skills are in frontend development which includes HTML, CSS, JavaScript, React JS, Redux, Node JS, Git/GitHub. Additionally I have beginner's knowledge in TypeScript, Express JS, GraphQL, and MongoDB and PostGreSQL.",
+    main: "My daily routine comprises working for my company, coding efficient and scalable front-end applications for Walmart's Warehouse Management Systems using React, Redux, Context API, Node.js and several other React helper libraries. Also, for my personal projects, I prefer using a combination of React, Context API, TypeScript, Node.js, Express, and many other libraries. I also have experience with HTML5, CSS3, and JavaScript and using Git/GitHub. I am accustomed to working in a team and an agile environment.",
+  },
 };

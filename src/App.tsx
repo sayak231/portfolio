@@ -3,14 +3,16 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Homepage from "./pages/Homepage";
 import Navbar from "./pages/Navbar";
-// import Skills from "./pages/Skills";
+import Skills from "./pages/Skills";
 // import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import { useRef } from "react";
+import useWindowDimensions from "./helpers/useWindowDimensions";
 
 const App: React.FC = () => {
-  // const skillRef = useRef<HTMLDivElement>(null);
+  const { width } = useWindowDimensions();
+  const skillRef = useRef<HTMLDivElement>(null);
   // const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
@@ -25,7 +27,7 @@ const App: React.FC = () => {
     ref.current!.scrollIntoView({ block: "start", behavior: "smooth" });
   };
 
-  // const executeScrollSkill = (e: React.SyntheticEvent) => executeScroll(e, skillRef);
+  const executeScrollSkill = (e: React.SyntheticEvent) => executeScroll(e, skillRef);
   // const executeScrollProjects = (e: React.SyntheticEvent) =>
   //   executeScroll(e, projectsRef);
   const executeScrollExperience = (e: React.SyntheticEvent) =>
@@ -37,7 +39,7 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <Navbar
-        // executeScrollSkill={executeScrollSkill}
+        executeScrollSkill={executeScrollSkill}
         // executeScrollProjects={executeScrollProjects}
         executeScrollExperience={executeScrollExperience}
         executeScrollContact={executeScrollContact}
@@ -48,8 +50,8 @@ const App: React.FC = () => {
         <Homepage ref={homeRef} executeScrollAbout={executeScrollAbout} />
         <About ref={aboutRef} />
         <Experience ref={experienceRef} />
-        {/* <Skills ref={skillRef} />
-        <Projects ref={projectsRef} /> */}
+        <Skills width={width} ref={skillRef} />
+        {/* <Projects ref={projectsRef} /> */}
         <Contact ref={contactRef} />
         <Footer />
       </div>
