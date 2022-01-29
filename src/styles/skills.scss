@@ -1,6 +1,7 @@
 @import "./global-css-variables.scss";
 
 #skills {
+  min-height: 700px;
   height: calc(100vh - 70px);
   background-color: #e7e7e7;
   scroll-margin: 70px;
